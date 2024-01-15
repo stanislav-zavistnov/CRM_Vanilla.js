@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skillbus CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+  <script defer src="https://unpkg.com/tippy.js@6"></script>
+  <script defer src="js/tippy.js" type="module"></script>
+  <script defer src="js/main.js" type="module"></script>
+  <script defer src="js/choices.min.js" type="module"></script>
+  <script defer src="js/select.js" type="module"></script>
+</head>
+
+<body class="body">
+  <div class="blur-window"></div>
+  <h1 class="visually-hidden">
+    Skillbus CRM
+  </h1>
+  <header class="header">
+    <a class="header-logo" href="#" data-tippy-content="PROVERKA">
+      <img src="img/logo.svg" alt="Skillbus logo">
+    </a>
+    <input class="header-input" type="text" placeholder="Введите запрос">
+  </header>
+  <main>
+    <section class="section-table container">
+      <h2 class="section-table__title">
+        Клиенты
+      </h2>
+      <div  class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr class="section-table-nav list-reset">
+              <td class="section-table-nav__item section-table-nav__item--id">
+                <span class="section-table-nav__item-btn-text">
+                  ID
+                </span>
+                <button
+                  class="section-table-nav__item-btn section-table-nav__item-btn--arrow-up btn-reset js-sort-id"></button>
+              </td>
+              <td class="section-table-nav__item section-table-nav__item--name">
+                <span class="section-table-nav__item-text">
+                  Фамилия Имя Отчество
+                </span>
+                <span class="section-table-nav__item-btn-text section-table-nav__item-btn-text--name">
+                  А-Я
+                </span>
+                <button
+                  class="section-table-nav__item-btn section-table-nav__item-btn--arrow-down btn-reset js-sort-name"></button>
+              </td>
+              <td class="section-table-nav__item section-table-nav__item--created">
+                <span class="section-table-nav__item-text">
+                  Дата и время создания
+                </span>
+                <button
+                  class="section-table-nav__item-btn section-table-nav__item-btn--arrow-down btn-reset js-sort-created"></button>
+              </td>
+              <td class="section-table-nav__item section-table-nav__item--changed">
+                <span class="section-table-nav__item-text">
+                  Последние изменения
+                </span>
+                <button
+                  class="section-table-nav__item-btn section-table-nav__item-btn--arrow-down btn-reset js-sort-changed"></button>
+              </td>
+              <td class="section-table-nav__item section-table-nav__item--contacts">
+                <span class="section-table-nav__item-text">
+                  Контакты
+                </span>
+              </td>
+              <td class="section-table-nav__item section-table-nav__item--actions">
+                <span class="section-table-nav__item-text">
+                  Действия
+                </span>
+              </td>
+            </tr>
+          </thead>
+          <tbody class="table-wrap"></tbody>
+        </table>
+      </div>
+      <button class="section-table__btn btn-reset">
+        <span class="section-table__btn-text">
+          Добавить клиента
+        </span>
+      </button>
+    </section>
+  </main>
+</body>
+
+</html>

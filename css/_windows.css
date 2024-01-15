@@ -1,0 +1,320 @@
+/* create */
+.create-client {
+  display: none;
+  padding: 25px 0;
+  max-height: 90vh;
+  overflow: auto;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.create-client__header {
+  padding: 0 30px;
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.create-title {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.close-btn {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  right: 6px;
+  top: -12px;
+  background-image: url('../img/close-window.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.create-form {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.create-form-input:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.create-form-input {
+  padding-bottom: 4px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-bottom: 1px solid var(--grey);
+}
+
+.add-contact {
+  padding: 8px 0;
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #c8c5d166;
+}
+
+.add-contact__form {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.add-contact__form-select {
+  padding: 10px 12px;
+  min-height: 40px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--black);
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--grey);
+  background-color: var(--select-background);
+}
+
+.add-contact__form-input {
+  padding: 8px 12px;
+  flex-grow: 1;
+  font-size: 14px;
+  min-height: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--black);
+  outline: none;
+  overflow: hidden;
+  border: 1px solid var(--grey);
+  background-color: transparent;
+}
+
+.add-contact__form-btn {
+  min-height: 40px;
+  width: 27px;
+  border: 1px solid var(--grey);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../img/clear-input.svg');
+  background-color: var(--select-background);
+  transition: border-color .3s ease-in-out, background-image .3s ease-in-out;
+}
+
+.add-contact__form-btn:hover,
+.add-contact__form-btn:focus {
+  border-color: var(--red);
+  background-image: url('../img/clear-input-hover.svg');
+  transition: border-color .3s ease-in-out, background-image .3s ease-in-out;
+}
+
+.add-contact__btn {
+  margin: 0 auto;
+  padding-left: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--black);
+  background-image: url('../img/add-contact.svg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: color .3s ease-in-out, background-image .3s ease-in-out;
+}
+
+.add-contact__btn:hover,
+.add-contact__btn:focus {
+  color: var(--purple);
+  background-image: url('../img/add-contact-hover.svg');
+  transition: color .3s ease-in-out, background-image .3s ease-in-out;
+}
+
+.save-cancel-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.save-btn {
+  margin-bottom: 5px;
+  padding: 17px 35px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--white);
+  background-color: var(--purple);
+  transition: background-color .3s ease-in-out;
+}
+
+.save-btn:hover,
+.save-btn:focus {
+  background-color: var(--purple-light);
+  transition: background-color .3s ease-in-out;
+}
+
+.save-btn:active {
+  background-color: var(--purple-dark);
+  transition: background-color .3s ease-in-out;
+}
+
+.cancel-btn {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+  opacity: 0.5;
+  transition: opacity .3s ease-in-out;
+}
+
+/* delete */
+.delete-client {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  padding: 25px 0;
+  justify-content: center;
+  max-width: 450px;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.delete-client__header {
+  margin-bottom: 11px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-client__descr {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 275px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* change */
+.change-client {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  max-height: 70vh;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  padding: 25px 0;
+  align-items: center;
+  max-width: 450px;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.change-client__header {
+  padding: 0 30px;
+  margin-bottom: 15px;
+  display: flex;
+  position: relative;
+}
+
+.change-title {
+  padding: 0;
+  margin: 0;
+  margin-right: 9px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.change-id {
+  padding-top: 6px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--grey);
+}
+
+.change-form {
+  padding: 0 30px;
+  margin-bottom: 25px;
+}
+
+.change-form__placeholder {
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--text-grey);
+}
+
+.error-message {
+  margin-bottom: 5px;
+  color: var(--red);
+}
+
+@media (max-width: 576px) {
+
+  .create-client,
+  .delete-client,
+  .change-client {
+    width: 300px;
+  }
+
+  .create-client__header,
+  .create-form,
+  .change-client__header,
+  .change-form {
+    padding: 0 15px;
+  }
+}
