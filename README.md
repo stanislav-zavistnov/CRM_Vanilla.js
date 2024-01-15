@@ -1,7 +1,7 @@
 # Manual
   - git clone
-  - npm i
-  - npm start
+  - npm i (needed for backend)
+  - npm start (for ease of launch)
 # You can
 add, delete, change, update, find and sort contact.
 # About
